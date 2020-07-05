@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #d31a1a;
-  --primary-color-darker: #bf0908;
+  --primary-color: #000000;
+  --primary-color-darker: #0fda8c;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(253, 5, 5, 0.65);
 }
 
 .logo {
