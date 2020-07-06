@@ -1,9 +1,12 @@
 Steps.
 1 - Install mongodb
 2 - Install Postman
-Node Js
-3 - npm install -> to install all dependencies
-3 - npm start o npm run dev -> run aplication
-4 - Use the file  "Api Ecomerce.postman_collection.json"  to import into Postman all the methods to consult the api
+3 - Install Node Js
+4 - npm install -> to install all dependencies
+5 - npm run dev -> run aplication
+6 - Use the file  "Api Ecomerce.postman_collection.json"  to import into Postman all the methods to consult the api
 
 Nota: Se utiliza axios para consumir la Api y entregar los datos a las páginas Pug
+
+NOTA IMPORTANTE:
+* El archivo "Funcionamiento.txt" contiene un link al video de Funcionamiento del API
