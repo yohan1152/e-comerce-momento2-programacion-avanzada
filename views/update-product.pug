@@ -1,0 +1,32 @@
+extends layout.pug
+
+block hero
+    section.hero.is-dark.is-bold
+        .hero-body
+            .container
+                h1.title Update product
+
+block content
+    .container(style="flex: 1; padding: 50px 0;")
+        <form action = '/products/modify-product' method = 'POST'>
+            input(type="hidden" class="form-control col-md-7" id="id" name="id" value = product._id placeholder="Enter Name" required)
+            <div class="form-group">
+                <label for="name">Name</label>
+                input(type="text" class="form-control col-md-7" id="name" name="name" value = product.name placeholder="Enter Name" required)
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                input(type="number" class="form-control col-md-7" name="price" id="price" value = product.price placeholder="Enter Price" required)
+            </div>
+            <div class="form-group">
+                <label for="image">Image (Url)</label>
+                input(type="text" class="form-control col-md-7" name="image" id="image" value = product.image placeholder="Enter Image" required)
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Update Product</button>
+        </form>
+        
+
+
+  
+                            
+                                

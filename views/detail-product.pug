@@ -1,0 +1,23 @@
+extends layout.pug
+
+block hero
+    section.hero.is-dark.is-bold
+        .hero-body
+            .container
+                h1.title Detail Product
+
+block content
+    .container(style="flex: 1; padding: 50px 0;")
+        .columns.is-multiline
+            .col-md-7
+                img(src=product.image style="width: 70%")
+            .col-md-5.mt-5.pl-sm-5
+                h1.title Specifications:
+                h4= 'Name: '
+                    strong= product.name 
+                h4= 'Price: '
+                    strong= product.price
+                h4= 'Created: '
+                    strong= product.created
+                                
+                                    

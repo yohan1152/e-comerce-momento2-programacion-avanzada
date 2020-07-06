@@ -1,0 +1,30 @@
+extends layout.pug
+
+block hero
+    section.hero.is-dark.is-bold
+        .hero-body
+            .container
+                h1.title Create new product
+
+block content
+    .container(style="flex: 1; padding: 50px 0;")
+        <form action = 'add-product' method = 'POST'>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control col-md-7" id="name" name="name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control col-md-7" name="price" id="price" placeholder="Enter Price" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Image (Url)</label>
+                <input type="text" class="form-control col-md-7" name="image" id="image" placeholder="Enter Image" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Add Product</button>
+        </form>
+
+
+  
+                            
+                                

@@ -1,17 +1,15 @@
-const express = require("express");
-const path = require("path");
-const app = express();
-const productsRouter = require('./routes/products');
-const productsApiRouter = require('./routes/api/products');
+const express = require('express');
+const mongoose = require('mongoose');
+const app = require('./app');
 
-app.use("/static", express.static(path.join(__dirname, "public")));
+mongoose.Promise = global.Promise;
 
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
+mongoose.connect("mongodb://localhost:27017/ecomerce", { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+    console.log("Conection ");
+    app.listen(8000, () => {
+        console.log(`Listening http://localhost:8000`);
+    });
 
-app.use("/products", productsRouter);
-app.use("/api/products", productsApiRouter);
-
-const server = app.listen(8000, function() {
-  console.log(`Listening http://localhost:${server.address().port}`);
-});
+}).catch((error) =>{
+    console.log(error);
+})

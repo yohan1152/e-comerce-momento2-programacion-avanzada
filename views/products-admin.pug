@@ -1,0 +1,31 @@
+extends layout.pug
+
+block hero
+    section.hero.is-dark.is-bold
+        .hero-body
+            .container
+                h1.title Octolion Shop
+                h2.subtitle Find the best products a the best price
+
+                a(href='create-product' class='btn btn-primary float-right')
+                    span New Product
+block content
+    .container(style="flex: 1; padding: 50px 0;")
+        .columns.is-multiline
+            each product in products.data
+                .column.is-one-quarter
+                    .card
+                        .card-image
+                            figure.image(style="height: 190px")
+                                img(src=product.image style="height: 100%; object-fit: cover")
+                        .card-content(style="padding-right: 15px; padding-left: 15px;")
+                            h3= product.name
+                            h6= 'Price: '+product.price+' USD'
+                                .columns.is-multiline.mb-5
+                                a(href='update-product/'+product._id class='btn btn-success' style='margin-right: 4%')
+                                    span Update  
+                                a(href='detail-product/'+product._id class='btn btn-info' style='margin-right: 4%')
+                                    span View  
+                                a(href='delete-product/'+product._id class='btn btn-danger')
+                                    span Delete
+                                    
