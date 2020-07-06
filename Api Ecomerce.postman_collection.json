@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "836394d7-a10b-477f-895e-62c199724ac2",
+		"name": "Api Ecomerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Listar todos los productos"
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n      \"name\": \"Bici 3\",\r\n      \"price\": 180000,\r\n      \"image\": \"/static/images/bike.jpg\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Listar todos los productos"
+			},
+			"response": []
+		},
+		{
+			"name": "getProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/5f0272f4aa498c210c6efe86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"5f0272f4aa498c210c6efe86"
+					]
+				},
+				"description": "Listar todos los productos"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/5f0272f4aa498c210c6efe86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"5f0272f4aa498c210c6efe86"
+					]
+				},
+				"description": "Listar todos los productos"
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Cartón 22",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "22200",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "/static/images/balon.jpg",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "5f0272f4aa498c210c6efe86",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Listar todos los productos"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
